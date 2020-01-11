@@ -22,7 +22,7 @@ Route::get('/teacher/{index}', function($index) {
     $teachers = array('Channak','Ronan','Sieha','Rady','Rith');
     $countArray = 0;
     // $string = "";
-    if($index < 5){
+    if($index < count($teachers)-1){
      echo"The teacher is:".$teachers[$index];
     }else {
         for ($i = 0; $i <= count($teachers)-1; $i++) {
