@@ -13,10 +13,10 @@ Route::get('/teacher/{index}', function($index) {
     $teachers = array('Channak','Ronan','Sieha','Rady','Rith');
     $countArray = 0;
     // $string = "";
-    if($index < 5){
+    if($index < count($teachers)){
      echo"The teacher is:".$teachers[$index];
     }else {
-        for ($i = 0; $i <= count($teachers)-1; $i++) {
+        for ($i = 0; $i < count($teachers); $i++) {
             $countArray = count($teachers)-1;
             if($i < count($teachers)-1){
                 echo "The array is: [$i].$teachers[$i],";
