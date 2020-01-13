@@ -2,21 +2,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/contact', function () {
-    return view('pages.contact');
-})->name('contact');
-Route::get('/action', function () {
-    return view('pages.action');
-})->name('action');
-Route::get('/join', function () {
-    return view('pages.join');
-})->name('join');
-Route::get('/news', function () {
-    return view('pages.news');
-})->name('news');
-Route::get('/about', function () {
-    return view('pages.about');
-})->name('about');
+Route::get('action','PagesController@action')->name('action');
+Route::get('about','PagesController@about')->name('about');
+Route::get('join','PagesController@join')->name('join');
+Route::get('contact','PagesController@contact')->name('contact');
+Route::get('news','PagesController@news')->name('news');
+
 
 Route::get('/teacher/{index}', function($index) {
     $teachers = array('Channak','Ronan','Sieha','Rady','Rith');
