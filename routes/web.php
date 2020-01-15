@@ -7,6 +7,7 @@ Route::get('about','PagesController@about')->name('about');
 Route::get('join','PagesController@join')->name('join');
 Route::get('contact','PagesController@contact')->name('contact');
 Route::get('news','PagesController@news')->name('news');
+Route::get('customer','PagesController@showCustomer')->name('news');
 
 
 Route::get('/teacher/{index}', function($index) {
