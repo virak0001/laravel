@@ -7,8 +7,7 @@ Route::get('about','PagesController@about')->name('about');
 Route::get('join','PagesController@join')->name('join');
 Route::get('contact','PagesController@contact')->name('contact');
 Route::get('news','PagesController@news')->name('news');
-Route::get('customer','PagesController@listCustomer')->name('news');
-
+Route::get('customer','PagesController@listCustomer')->name('customer');
 
 Route::get('/teacher/{index}', function($index) {
     $teachers = array('Channak','Ronan','Sieha','Rady','Rith');
