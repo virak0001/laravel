@@ -8,12 +8,15 @@ Route::get('join','PagesController@join')->name('join');
 Route::get('contact','PagesController@contact')->name('contact');
 Route::get('news','PagesController@news')->name('news');
 Route::get('customer','PagesController@listCustomer')->name('news');
+Route::get('student','StudentsController@showStudent')->name('student');
+Route::get('students','GetStudentInformationController@getAllStudent');
+Route::get('subject','SubjectsController@showSubject')->name('subject');
+Route::get('/student/{name}','StudentsController@searchStudent');
 
 
 Route::get('/teacher/{index}', function($index) {
     $teachers = array('Channak','Ronan','Sieha','Rady','Rith');
     $countArray = 0;
-    // $string = "";
     if($index < count($teachers)){
      echo"The teacher is:".$teachers[$index];
     }else {
