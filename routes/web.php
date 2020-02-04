@@ -10,8 +10,14 @@ Route::get('news','PagesController@news')->name('news');
 Route::get('customer','PagesController@listCustomer')->name('news');
 Route::get('student','StudentsController@showStudent')->name('student');
 Route::get('students','GetStudentInformationController@getAllStudent');
+Route::post('save','GetStudentInformationController@saveStudent');
+Route::get('formStudent','GetStudentInformationController@form');
 Route::get('subject','SubjectsController@showSubject')->name('subject');
 Route::get('/student/{name}','StudentsController@searchStudent');
+//update student
+
+Route::get('formUpdate/{id}','GetStudentInformationController@formUpdate')->name('formUpdate');
+Route::PATCH('update/{id}','GetStudentInformationController@update')->name('update');
 
 
 Route::get('/teacher/{index}', function($index) {

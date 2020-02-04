@@ -12,7 +12,7 @@ class StudentsController extends Controller
         return view('pages.student')->with('students', $this->students);
     }
 
-    function searchStudent($name)
+    public function searchStudent($name)
     {
         $result = $name . " Not Found";
         if (in_array($name, $this->students)) {
